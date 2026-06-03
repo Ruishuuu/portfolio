@@ -1,122 +1,199 @@
-{\rtf1\ansi\ansicpg936\cocoartf2761
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>向瑞淑 | 企业文化专员作品集</title>
+    <!-- 国内加速镜像，确保样式和交互秒开 -->
+    <script src="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://lib.baomitu.com/alpinejs/3.12.0/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #fdfcfb; --pink: #d81b60; --text: #323330; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .handwritten { font-family: 'Dancing Script', cursive; color: var(--pink); }
+        .serif-title { font-family: 'Noto Serif SC', serif; }
+        .clickable-card { background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 2.5rem; transition: 0.4s; cursor: pointer; overflow: hidden; position: relative; }
+        .clickable-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(216, 27, 96, 0.08); }
+        [x-cloak] { display: none !important; }
+        
+        /* 跑马灯动画 */
+        .marquee-wrapper { width: 100%; overflow: hidden; background: white; padding: 25px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; }
+        .marquee-content { display: flex; width: max-content; animation: scroll 70s linear infinite; }
+        .marquee-content:hover { animation-play-state: paused; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .tag-pill { padding: 10px 24px; margin: 0 12px; background: #fff; border: 1px solid #eee; border-radius: 50px; font-size: 14px; font-weight: 600; color: #777; white-space: nowrap; transition: 0.3s; cursor: pointer; }
+        .tag-pill:hover { background: var(--pink); color: white; }
+        
+        .img-container { background: #f9f9f9; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .jump-btn { background: white; padding: 1.5rem; border-radius: 2rem; border: 1px solid #eee; transition: 0.3s; text-align: center; font-weight: 600; color: #888; }
+        .jump-btn:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-5px); }
+    </style>
+</head>
+<body x-data="{ 
+    modal: false, mTitle: '', mText: '', mImg: '',
+    db: {
+        /* 精准匹配你的文件名大小写 */
+        '一岁比熊家长': { t: '这是我的比熊“小太阳”。照顾它的过程让我更有耐心。', i: 'bichon.jpg' },
+        'ENFJ': { t: '全法春晚脱口秀导演现场。作为主人公人格，我享受连接他人。', i: 'talkshow_live.JPG' },
+        '组织能力': { t: '布列塔尼春节集市。统筹大型舞龙表演。', i: 'dragon_dance.jpg' },
+        '跨文化沟通': { t: '国家元首访法期间，我深入外事保障第一线。', i: 'state_action.jpg' },
+        '超高精力人士': { t: '2024巴黎奥运会服务现场。', i: 'olympics_live.jpg' }
+    },
+    rawTags: ['摄影', '烘培', '徒步', '执行能力强', '组织能力', '跨文化沟通', '一岁比熊家长', 'ENFJ', '超高精力人士', '收纳整理', 'K-pop', '剪映', 'Canva', '美食鉴赏家', '喜欢旅游']
+}">
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="zh-CN">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>\uc0\u21521 \u29790 \u28113  | \u20225 \u19994 \u25991 \u21270 \u19987 \u21592 \u20316 \u21697 \u38598 </title>\
-    <script src="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.js"></script>\
-    <script src="https://lib.baomitu.com/alpinejs/3.12.0/cdn.min.js"></script>\
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">\
-    <style>\
-        :root \{ --bg: #fdfcfb; --pink: #d81b60; --text: #323330; \}\
-        body \{ background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; scroll-behavior: smooth; \}\
-        .handwritten \{ font-family: 'Dancing Script', cursive; color: var(--pink); \}\
-        .serif-title \{ font-family: 'Noto Serif SC', serif; \}\
-        .clickable-card \{ background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 2.5rem; transition: 0.4s; cursor: pointer; overflow: hidden; position: relative; \}\
-        .clickable-card:hover \{ transform: translateY(-8px); box-shadow: 0 20px 40px rgba(216, 27, 96, 0.08); \}\
-        [x-cloak] \{ display: none !important; \}\
-        .marquee-wrapper \{ width: 100%; overflow: hidden; background: white; padding: 25px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; \}\
-        .marquee-content \{ display: flex; width: max-content; animation: scroll 60s linear infinite; \}\
-        .marquee-content:hover \{ animation-play-state: paused; \}\
-        @keyframes scroll \{ 0% \{ transform: translateX(0); \} 100% \{ transform: translateX(-50%); \} \}\
-        .tag-pill \{ padding: 10px 24px; margin: 0 12px; background: #fff; border: 1px solid #eee; border-radius: 50px; font-size: 14px; font-weight: 600; color: #777; cursor: pointer; \}\
-        .tag-pill:hover \{ background: var(--pink); color: white; \}\
-        .img-container \{ background: #f9f9f9; overflow: hidden; \}\
-        .img-container img \{ width: 100%; height: 100%; object-fit: cover; \}\
-    </style>\
-</head>\
-<body x-data="\{ \
-    modal: false, mTitle: '', mText: '', mImg: '',\
-    db: \{\
-        '\uc0\u19968 \u23681 \u27604 \u29066 \u23478 \u38271 ': \{ t: '\u29031 \u39038 \u27604 \u29066 \'93\u23567 \u22826 \u38451 \'94\u30340 \u36807 \u31243 \u35753 \u25105 \u26356 \u26377 \u32784 \u24515 \u21644 \u36131 \u20219 \u24863 \u12290 ', i: 'bichon.jpg' \},\
-        'ENFJ': \{ t: '\uc0\u20840 \u27861 \u26149 \u26202 \u33073 \u21475 \u31168 \u23548 \u28436 \u29616 \u22330 \u12290 \u25105 \u28909 \u34935 \u20110 \u36830 \u25509 \u20182 \u20154 \u12290 ', i: 'talkshow_live.jpg' \},\
-        '\uc0\u32452 \u32455 \u33021 \u21147 ': \{ t: '\u24067 \u21015 \u22612 \u23612 \u26149 \u33410 \u38598 \u24066 \u12290 \u32479 \u31609 \u22823 \u22411 \u33310 \u40857 \u34920 \u28436 \u12290 ', i: 'dragon_dance.jpg' \},\
-        '\uc0\u36229 \u39640 \u31934 \u21147 \u20154 \u22763 ': \{ t: '2024\u24052 \u40654 \u22885 \u36816 \u20250 \u26381 \u21153 \u29616 \u22330 \u12290 ', i: 'olympics_live.jpg' \},\
-        '\uc0\u25668 \u24433 ': \{ t: '\u35760 \u24405 \u24314 \u31569 \u19982 \u29983 \u27963 \u30340 \u36830 \u25509 \u12290 ', i: 'portrait_main.jpg' \}\
-    \},\
-    rawTags: ['\uc0\u25668 \u24433 ', '\u28888 \u22521 ', '\u24466 \u27493 ', '\u25191 \u34892 \u33021 \u21147 \u24378 ', '\u32452 \u32455 \u33021 \u21147 ', '\u36328 \u25991 \u21270 \u27807 \u36890 ', '\u19968 \u23681 \u27604 \u29066 \u23478 \u38271 ', 'ENFJ', '\u36229 \u39640 \u31934 \u21147 \u20154 \u22763 ', '\u25910 \u32435 \u25972 \u29702 ', 'K-pop', '\u21098 \u26144 ', 'Canva', '\u30475 \u23567 \u35828 ', '\u25340 \u22270 ', '\u32654 \u39135 \u37492 \u36175 \u23478 ']\
-\}">\
-\
-    <!-- \uc0\u20840 \u23616 \u24377 \u31383  -->\
-    <div x-show="modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-100/90 backdrop-blur-md" x-cloak x-transition.opacity>\
-        <div @click.away="modal = false" class="bg-white w-full max-w-xl rounded-[3rem] shadow-2xl overflow-hidden relative border border-pink-50">\
-            <button @click="modal = false" class="absolute top-6 right-8 text-4xl font-light hover:text-pink-600 z-10">&times;</button>\
-            <div class="h-80 bg-gray-100" x-show="mImg"><img :src="mImg" class="w-full h-full object-cover"></div>\
-            <div class="p-10 text-center">\
-                <h2 class="serif-title text-3xl mb-4" x-text="mTitle"></h2>\
-                <div class="text-gray-600 text-lg" x-html="mText"></div>\
-            </div>\
-        </div>\
-    </div>\
-\
-    <!-- 01. \uc0\u39318 \u39029  -->\
-    <header class="min-h-[85vh] flex flex-col items-center justify-center pt-20">\
-        <div class="relative mb-12">\
-            <img src="portrait_main.jpg" class="w-72 h-96 object-cover rounded-[5rem] shadow-2xl border-[12px] border-white">\
-            <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2.5rem] shadow-2xl border border-pink-50">\
-                <h1 class="serif-title text-5xl italic">\uc0\u21521 \u29790 \u28113 </h1>\
-                <p class="handwritten text-2xl mt-1">Ruishu Xiang.</p>\
-            </div>\
-        </div>\
-        <div class="marquee-wrapper mt-16">\
-            <div class="marquee-content">\
-                <template x-for="tag in [...rawTags, ...rawTags]">\
-                    <div class="tag-pill" @click="mTitle=tag; mText=db[tag]?.t || '\uc0\u20855 \u22791 \u26497 \u24378 \u30340 \u25191 \u34892 \u21147 \u19982 \u25991 \u21270 \u25935 \u24863 \u24230 \u12290 '; mImg=db[tag]?.i || ''; modal=true" x-text="tag"></div>\
-                </template>\
-            </div>\
-        </div>\
-    </header>\
-\
-    <!-- 02. \uc0\u35270 \u35273 \u20316 \u21697  -->\
-    <section class="max-w-6xl mx-auto px-6 py-24">\
-        <h2 class="serif-title text-4xl mb-16 text-center">\uc0\u35270 \u35273 \u23457 \u32654  \'b7 Poster Gallery</h2>\
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">\
-            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u12298 \u21452 \u35821 \u26725 \u12299 \u39033 \u30446 '; mImg='poster_bridge.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
-                <img src="poster_bridge.jpg">\
-            </div>\
-            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u34382 \u24180 \u26149 \u33410 \u31574 \u21010 '; mImg='poster_tiger.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
-                <img src="poster_tiger.jpg">\
-            </div>\
-            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u32426 \u24405 \u29255 \u36335 \u28436 '; mImg='poster_roadshow.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
-                <img src="poster_roadshow.jpg">\
-            </div>\
-        </div>\
-    </section>\
-\
-    <!-- 03. \uc0\u23454 \u20064 \u19982 \u25945 \u32946  -->\
-    <section class="max-w-6xl mx-auto px-6 py-24 bg-stone-50 rounded-[4rem]">\
-        <div class="space-y-12">\
-            <div class="clickable-card p-12 border-l-[12px] border-l-pink-600">\
-                <h3 class="serif-title text-4xl italic">JD.com \uc0\u20140 \u19996 </h3>\
-                <p class="text-gray-500 mt-6 text-lg italic">\uc0\u38646 \u21806 \u29992 \u25143 \u30740 \u31350 \u23454 \u20064 \u29983 \u65306 \u35782 \u21035 \'93\u36828 \u31243 \u23389 \u24515 \'94\u38656 \u27714 \u12290 </p>\
-            </div>\
-            <div class="clickable-card p-12">\
-                <h3 class="serif-title text-4xl italic">ZTE \uc0\u20013 \u20852 \u36890 \u35759 </h3>\
-                <p class="text-gray-500 mt-6 text-lg">\uc0\u32479 \u31609 Orange\u32852 \u21512 \u31572 \u35874 \u23476 \u65292 6\u20010 \u26376 500+\u21457 \u31080 0\u35823 \u24046 \u12290 </p>\
-            </div>\
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10">\
-                <div class="flex flex-col items-center">\
-                    <img src="saclay_campus.jpg" class="w-full h-48 object-cover rounded-3xl mb-4">\
-                    <h4 class="font-bold">\uc0\u24052 \u40654 -\u33832 \u20811 \u38647 \u22823 \u23398  (\u30805 \u22763 )</h4>\
-                </div>\
-                <div class="flex flex-col items-center">\
-                    <img src="ubo_campus.jpg" class="w-full h-48 object-cover rounded-3xl mb-4">\
-                    <h4 class="font-bold">\uc0\u35199 \u24067 \u21015 \u22612 \u23612 \u22823 \u23398  (\u26412 \u31185 )</h4>\
-                </div>\
-            </div>\
-        </div>\
-    </section>\
-\
-    <footer class="py-24 text-center">\
-        <p class="text-[10px] font-black tracking-[0.6em] text-gray-300 uppercase">\uc0\u21521 \u29790 \u28113  / ENFJ / \u20225 \u19994 \u25991 \u21270 \u19987 \u21592 </p>\
-    </footer>\
-\
-</body>\
-</html>}
+    <!-- 全局交互弹窗 -->
+    <div x-show="modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-100/90 backdrop-blur-md" x-cloak x-transition.opacity>
+        <div @click.away="modal = false" class="bg-white w-full max-w-xl rounded-[3rem] shadow-2xl overflow-hidden relative flex flex-col">
+            <button @click="modal = false" class="absolute top-6 right-8 text-4xl font-light hover:text-pink-600 z-10">&times;</button>
+            <div class="h-80 bg-gray-100" x-show="mImg"><img :src="mImg" class="w-full h-full object-cover"></div>
+            <div class="p-10 text-center">
+                <h2 class="serif-title text-3xl text-gray-900 mb-4" x-text="mTitle"></h2>
+                <div class="prose text-gray-600 leading-relaxed text-lg" x-html="mText"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 01. 首页：个人画像 -->
+    <header class="min-h-[85vh] flex flex-col items-center justify-center pt-20">
+        <div class="relative mb-12">
+            <img src="portrait_main.jpg" class="w-72 h-96 object-cover rounded-[5rem] shadow-2xl border-[12px] border-white transform rotate-1">
+            <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2.5rem] shadow-2xl border border-pink-50">
+                <h1 class="serif-title text-5xl italic text-gray-800">向瑞淑</h1>
+                <p class="handwritten text-2xl mt-1">Ruishu Xiang.</p>
+            </div>
+        </div>
+        <div class="marquee-wrapper mt-16">
+            <div class="marquee-content">
+                <template x-for="tag in [...rawTags, ...rawTags]">
+                    <div class="tag-pill" @click="mTitle=tag; mText=db[tag]?.t || '作为高精力选手，我将这种热情带入每一项工作中。'; mImg=db[tag]?.i || ''; modal=true" x-text="tag"></div>
+                </template>
+            </div>
+        </div>
+    </header>
+
+    <!-- 02. 好奇心导航 -->
+    <nav class="max-w-6xl mx-auto px-6 py-16">
+        <div class="bg-stone-50/50 rounded-[3.5rem] p-12 border border-stone-100/50">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-400">
+                <a href="#posters" class="jump-btn">🎨 视觉作品集</a>
+                <a href="#copy" class="jump-btn">✍️ 文案作品集</a>
+                <a href="#experience" class="jump-btn">💼 实习经历</a>
+                <a href="#edu" class="jump-btn">🎓 教育背景</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 03. 教育背景 -->
+    <section id="edu" class="max-w-6xl mx-auto px-6 py-24 border-t border-stone-100">
+        <h2 class="serif-title text-3xl mb-12 flex items-center gap-4 text-gray-900"><span class="handwritten text-pink-600 text-4xl underline italic">01.</span> 学习经历 · Academic</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="clickable-card flex flex-col md:flex-row h-auto md:h-72">
+                <div class="w-full md:w-1/2 img-container"><img src="saclay_campus.jpg"></div>
+                <div class="p-8 flex flex-col justify-center text-center">
+                    <h3 class="font-bold text-xl italic underline decoration-pink-100">巴黎-萨克雷大学</h3>
+                    <p class="text-pink-600 text-xs mt-2 font-black italic">Saclay University (硕士)</p>
+                </div>
+            </div>
+            <div class="clickable-card flex flex-col md:flex-row h-auto md:h-72">
+                <div class="w-full md:w-1/2 img-container"><img src="ubo_campus.JPG"></div>
+                <div class="p-8 flex flex-col justify-center text-center">
+                    <h3 class="font-bold text-xl italic underline decoration-pink-100">西布列塔尼大学</h3>
+                    <p class="text-pink-600 text-xs mt-2 font-black italic">U.B.O (本科)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. 视觉作品：海报 -->
+    <section id="posters" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="serif-title text-4xl mb-16 text-center text-gray-800 italic underline underline-offset-8 decoration-pink-100">视觉审美 · Poster Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="group" @click="mTitle='双语桥海报'; mText='设计逻辑：融合中法地标，突出跨文化交流。'; mImg='poster_bridge.jpg'; modal=true">
+                <div class="clickable-card h-[500px] img-container"><img src="poster_bridge.jpg"></div>
+                <p class="mt-4 text-center font-bold text-gray-400 italic"># PONT BILINGUE</p>
+            </div>
+            <div class="group" @click="mTitle='虎年策划海报'; mText='视觉设计：红金配色，生肖剪纸风格。'; mImg='poster_tiger.jpg'; modal=true">
+                <div class="clickable-card h-[500px] img-container"><img src="poster_tiger.jpg"></div>
+                <p class="mt-4 text-center font-bold text-gray-400 italic"># LUNAR NEW YEAR</p>
+            </div>
+            <div class="group" @click="mTitle='路演策划海报'; mText='电影感排版与信息层级展示。'; mImg='poster_roadshow.jpg'; modal=true">
+                <div class="clickable-card h-[500px] img-container"><img src="poster_roadshow.jpg"></div>
+                <p class="mt-4 text-center font-bold text-gray-400 italic"># FILM ROADSHOW</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. 文案展示 -->
+    <section id="copy" class="max-w-6xl mx-auto px-6 py-24 bg-stone-50 rounded-[4rem]">
+        <h2 class="serif-title text-4xl mb-16 text-center">文案逻辑 · Copywriting</h2>
+        <div class="space-y-6 max-w-4xl mx-auto text-gray-500">
+            <div class="clickable-card p-10 flex gap-8 items-center bg-white border-l-[12px] border-l-pink-600">
+                <div class="text-4xl text-pink-50 font-bold serif-title">01</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-xl mb-1 text-gray-800">活动复盘：赋予事件记忆点</h4>
+                    <p class="text-sm italic">萨克雷学联篮球赛复盘：提升组织凝聚力。</p>
+                </div>
+                <a href="https://mp.weixin.qq.com/s/IcZmoV0qlgnJ-y5W-TS8Gw" target="_blank" class="text-pink-600 font-bold text-xs underline">阅读推文内容 →</a>
+            </div>
+            <div class="clickable-card p-10 flex gap-8 items-center bg-white border-l-[12px] border-l-stone-200">
+                <div class="text-4xl text-stone-50 font-bold serif-title">02</div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-xl mb-1 text-gray-800">深度洞察：文字背后的调研力</h4>
+                    <p class="text-sm italic">京东调研报告：用户访谈转化为精准决策建议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06. 实习经历 -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="serif-title text-3xl mb-16 flex items-center gap-4 text-gray-900"><span class="handwritten text-pink-600 text-4xl underline italic">02.</span> 实习经历 · Internships</h2>
+        <div class="space-y-8">
+            <div class="clickable-card p-12 border-l-[12px] border-l-pink-600">
+                <h3 class="serif-title text-4xl italic underline underline-offset-4 decoration-pink-50 text-gray-800">JD.com 京东</h3>
+                <p class="text-gray-500 mt-6 leading-relaxed max-w-2xl text-lg italic">识别“远程孝心”需求，推动产品适老化转型。</p>
+            </div>
+            <div class="clickable-card p-12 border-l-[12px] border-l-stone-200">
+                <h3 class="serif-title text-4xl italic underline underline-offset-4 decoration-pink-50 text-gray-800">So Thoms 苏彤式</h3>
+                <p class="text-gray-500 mt-6 leading-relaxed max-w-2xl text-lg italic">KOL内容共创，新客咨询量月增30%。</p>
+            </div>
+            <!-- 中兴黑金板块 -->
+            <div class="bg-zinc-900 text-white rounded-[3.5rem] p-12 shadow-2xl">
+                <h3 class="serif-title text-5xl text-pink-500 italic underline underline-offset-8">ZTE 中兴通讯</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 text-sm italic">
+                    <p class="text-gray-400 leading-relaxed font-light">统筹Orange联合答谢宴，协调中法多国文化表演；实现子公司百人年会本土化融合落地。</p>
+                    <p class="text-gray-400 leading-relaxed font-light">极致严谨实操：6个月500+发票0误差稽核；维护管理300余份双语核心合同规章体系。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. 高光实操现场 -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="serif-title text-3xl mb-12 text-center text-gray-400 italic">实操现场 · Moments</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="clickable-card h-[500px] group" @click="mTitle='国家元首访法保障'; mText='2024国家级外事活动现场执行组长。'; mImg='state_action.jpg'; modal=true">
+                <img src="state_action.jpg" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="grid grid-rows-2 gap-8">
+                <div class="clickable-card group" @click="mTitle='巴黎奥运会服务现场'; mImg='olympics_live.jpg'; modal=true">
+                    <img src="olympics_live.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="clickable-card group" @click="mTitle='全法春晚脱口秀导演'; mImg='talkshow_live.JPG'; modal=true">
+                    <img src="talkshow_live.JPG" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 text-center border-t border-stone-100">
+        <h3 class="handwritten text-4xl mb-8 text-pink-600">Let's Create More Together.</h3>
+        <p class="text-[10px] font-black tracking-[0.6em] text-gray-300 uppercase italic">向瑞淑 / ENFJ / 企业文化专员应聘作品集</p>
+    </footer>
+
+</body>
+</html>

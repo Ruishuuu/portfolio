@@ -1,0 +1,122 @@
+{\rtf1\ansi\ansicpg936\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="zh-CN">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>\uc0\u21521 \u29790 \u28113  | \u20225 \u19994 \u25991 \u21270 \u19987 \u21592 \u20316 \u21697 \u38598 </title>\
+    <script src="https://lib.baomitu.com/tailwindcss/2.2.19/tailwind.min.js"></script>\
+    <script src="https://lib.baomitu.com/alpinejs/3.12.0/cdn.min.js"></script>\
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">\
+    <style>\
+        :root \{ --bg: #fdfcfb; --pink: #d81b60; --text: #323330; \}\
+        body \{ background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; scroll-behavior: smooth; \}\
+        .handwritten \{ font-family: 'Dancing Script', cursive; color: var(--pink); \}\
+        .serif-title \{ font-family: 'Noto Serif SC', serif; \}\
+        .clickable-card \{ background: white; border: 1px solid rgba(0,0,0,0.05); border-radius: 2.5rem; transition: 0.4s; cursor: pointer; overflow: hidden; position: relative; \}\
+        .clickable-card:hover \{ transform: translateY(-8px); box-shadow: 0 20px 40px rgba(216, 27, 96, 0.08); \}\
+        [x-cloak] \{ display: none !important; \}\
+        .marquee-wrapper \{ width: 100%; overflow: hidden; background: white; padding: 25px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; \}\
+        .marquee-content \{ display: flex; width: max-content; animation: scroll 60s linear infinite; \}\
+        .marquee-content:hover \{ animation-play-state: paused; \}\
+        @keyframes scroll \{ 0% \{ transform: translateX(0); \} 100% \{ transform: translateX(-50%); \} \}\
+        .tag-pill \{ padding: 10px 24px; margin: 0 12px; background: #fff; border: 1px solid #eee; border-radius: 50px; font-size: 14px; font-weight: 600; color: #777; cursor: pointer; \}\
+        .tag-pill:hover \{ background: var(--pink); color: white; \}\
+        .img-container \{ background: #f9f9f9; overflow: hidden; \}\
+        .img-container img \{ width: 100%; height: 100%; object-fit: cover; \}\
+    </style>\
+</head>\
+<body x-data="\{ \
+    modal: false, mTitle: '', mText: '', mImg: '',\
+    db: \{\
+        '\uc0\u19968 \u23681 \u27604 \u29066 \u23478 \u38271 ': \{ t: '\u29031 \u39038 \u27604 \u29066 \'93\u23567 \u22826 \u38451 \'94\u30340 \u36807 \u31243 \u35753 \u25105 \u26356 \u26377 \u32784 \u24515 \u21644 \u36131 \u20219 \u24863 \u12290 ', i: 'bichon.jpg' \},\
+        'ENFJ': \{ t: '\uc0\u20840 \u27861 \u26149 \u26202 \u33073 \u21475 \u31168 \u23548 \u28436 \u29616 \u22330 \u12290 \u25105 \u28909 \u34935 \u20110 \u36830 \u25509 \u20182 \u20154 \u12290 ', i: 'talkshow_live.jpg' \},\
+        '\uc0\u32452 \u32455 \u33021 \u21147 ': \{ t: '\u24067 \u21015 \u22612 \u23612 \u26149 \u33410 \u38598 \u24066 \u12290 \u32479 \u31609 \u22823 \u22411 \u33310 \u40857 \u34920 \u28436 \u12290 ', i: 'dragon_dance.jpg' \},\
+        '\uc0\u36229 \u39640 \u31934 \u21147 \u20154 \u22763 ': \{ t: '2024\u24052 \u40654 \u22885 \u36816 \u20250 \u26381 \u21153 \u29616 \u22330 \u12290 ', i: 'olympics_live.jpg' \},\
+        '\uc0\u25668 \u24433 ': \{ t: '\u35760 \u24405 \u24314 \u31569 \u19982 \u29983 \u27963 \u30340 \u36830 \u25509 \u12290 ', i: 'portrait_main.jpg' \}\
+    \},\
+    rawTags: ['\uc0\u25668 \u24433 ', '\u28888 \u22521 ', '\u24466 \u27493 ', '\u25191 \u34892 \u33021 \u21147 \u24378 ', '\u32452 \u32455 \u33021 \u21147 ', '\u36328 \u25991 \u21270 \u27807 \u36890 ', '\u19968 \u23681 \u27604 \u29066 \u23478 \u38271 ', 'ENFJ', '\u36229 \u39640 \u31934 \u21147 \u20154 \u22763 ', '\u25910 \u32435 \u25972 \u29702 ', 'K-pop', '\u21098 \u26144 ', 'Canva', '\u30475 \u23567 \u35828 ', '\u25340 \u22270 ', '\u32654 \u39135 \u37492 \u36175 \u23478 ']\
+\}">\
+\
+    <!-- \uc0\u20840 \u23616 \u24377 \u31383  -->\
+    <div x-show="modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-100/90 backdrop-blur-md" x-cloak x-transition.opacity>\
+        <div @click.away="modal = false" class="bg-white w-full max-w-xl rounded-[3rem] shadow-2xl overflow-hidden relative border border-pink-50">\
+            <button @click="modal = false" class="absolute top-6 right-8 text-4xl font-light hover:text-pink-600 z-10">&times;</button>\
+            <div class="h-80 bg-gray-100" x-show="mImg"><img :src="mImg" class="w-full h-full object-cover"></div>\
+            <div class="p-10 text-center">\
+                <h2 class="serif-title text-3xl mb-4" x-text="mTitle"></h2>\
+                <div class="text-gray-600 text-lg" x-html="mText"></div>\
+            </div>\
+        </div>\
+    </div>\
+\
+    <!-- 01. \uc0\u39318 \u39029  -->\
+    <header class="min-h-[85vh] flex flex-col items-center justify-center pt-20">\
+        <div class="relative mb-12">\
+            <img src="portrait_main.jpg" class="w-72 h-96 object-cover rounded-[5rem] shadow-2xl border-[12px] border-white">\
+            <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-[2.5rem] shadow-2xl border border-pink-50">\
+                <h1 class="serif-title text-5xl italic">\uc0\u21521 \u29790 \u28113 </h1>\
+                <p class="handwritten text-2xl mt-1">Ruishu Xiang.</p>\
+            </div>\
+        </div>\
+        <div class="marquee-wrapper mt-16">\
+            <div class="marquee-content">\
+                <template x-for="tag in [...rawTags, ...rawTags]">\
+                    <div class="tag-pill" @click="mTitle=tag; mText=db[tag]?.t || '\uc0\u20855 \u22791 \u26497 \u24378 \u30340 \u25191 \u34892 \u21147 \u19982 \u25991 \u21270 \u25935 \u24863 \u24230 \u12290 '; mImg=db[tag]?.i || ''; modal=true" x-text="tag"></div>\
+                </template>\
+            </div>\
+        </div>\
+    </header>\
+\
+    <!-- 02. \uc0\u35270 \u35273 \u20316 \u21697  -->\
+    <section class="max-w-6xl mx-auto px-6 py-24">\
+        <h2 class="serif-title text-4xl mb-16 text-center">\uc0\u35270 \u35273 \u23457 \u32654  \'b7 Poster Gallery</h2>\
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">\
+            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u12298 \u21452 \u35821 \u26725 \u12299 \u39033 \u30446 '; mImg='poster_bridge.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
+                <img src="poster_bridge.jpg">\
+            </div>\
+            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u34382 \u24180 \u26149 \u33410 \u31574 \u21010 '; mImg='poster_tiger.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
+                <img src="poster_tiger.jpg">\
+            </div>\
+            <div class="clickable-card h-[500px] img-container" @click="mTitle='\uc0\u32426 \u24405 \u29255 \u36335 \u28436 '; mImg='poster_roadshow.jpg'; mText='\u35270 \u35273 \u35774 \u35745 \u20316 \u21697 '; modal=true">\
+                <img src="poster_roadshow.jpg">\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- 03. \uc0\u23454 \u20064 \u19982 \u25945 \u32946  -->\
+    <section class="max-w-6xl mx-auto px-6 py-24 bg-stone-50 rounded-[4rem]">\
+        <div class="space-y-12">\
+            <div class="clickable-card p-12 border-l-[12px] border-l-pink-600">\
+                <h3 class="serif-title text-4xl italic">JD.com \uc0\u20140 \u19996 </h3>\
+                <p class="text-gray-500 mt-6 text-lg italic">\uc0\u38646 \u21806 \u29992 \u25143 \u30740 \u31350 \u23454 \u20064 \u29983 \u65306 \u35782 \u21035 \'93\u36828 \u31243 \u23389 \u24515 \'94\u38656 \u27714 \u12290 </p>\
+            </div>\
+            <div class="clickable-card p-12">\
+                <h3 class="serif-title text-4xl italic">ZTE \uc0\u20013 \u20852 \u36890 \u35759 </h3>\
+                <p class="text-gray-500 mt-6 text-lg">\uc0\u32479 \u31609 Orange\u32852 \u21512 \u31572 \u35874 \u23476 \u65292 6\u20010 \u26376 500+\u21457 \u31080 0\u35823 \u24046 \u12290 </p>\
+            </div>\
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10">\
+                <div class="flex flex-col items-center">\
+                    <img src="saclay_campus.jpg" class="w-full h-48 object-cover rounded-3xl mb-4">\
+                    <h4 class="font-bold">\uc0\u24052 \u40654 -\u33832 \u20811 \u38647 \u22823 \u23398  (\u30805 \u22763 )</h4>\
+                </div>\
+                <div class="flex flex-col items-center">\
+                    <img src="ubo_campus.jpg" class="w-full h-48 object-cover rounded-3xl mb-4">\
+                    <h4 class="font-bold">\uc0\u35199 \u24067 \u21015 \u22612 \u23612 \u22823 \u23398  (\u26412 \u31185 )</h4>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <footer class="py-24 text-center">\
+        <p class="text-[10px] font-black tracking-[0.6em] text-gray-300 uppercase">\uc0\u21521 \u29790 \u28113  / ENFJ / \u20225 \u19994 \u25991 \u21270 \u19987 \u21592 </p>\
+    </footer>\
+\
+</body>\
+</html>}
